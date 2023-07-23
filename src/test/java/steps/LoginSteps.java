@@ -88,7 +88,7 @@ public class LoginSteps extends CommonMethods {
 //        usernameField.sendKeys("admin");
 //        passwordField.sendKeys("wrong");
         sendText(("admin"), loginPage.usernameField);
-        sendText(("asdfasd"), loginPage.passwordField);
+        sendText(("asd45fasd"), loginPage.passwordField);
     }
 
     @Then("error message is displayed")
