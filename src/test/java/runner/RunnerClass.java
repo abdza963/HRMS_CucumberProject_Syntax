@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         dryRun = false,
 
        // tags = "@smoke",
-        tags = "@invalid",
+        tags = "@Db",
 
         // it means sometimes the console output for cucumber test is having some irrelevant,
         // when you set it to true, it removes all that irrelevant information from the console and will give you simple output

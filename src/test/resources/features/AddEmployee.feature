@@ -43,3 +43,10 @@ Feature: Adding employee in HRM application
   @excel
   Scenario: adding multiple employees using excel file
     When user adds multiple employees using excel from "EmployeeDataBatch16" and verify it
+
+  @Db
+  Scenario: Adding one employee from feature file
+    When user enters "Abdul" and "Rahman" and "Zarli"
+    And clicks on save button
+    Then employee added successfully
+    Then verify employee is stored in database
