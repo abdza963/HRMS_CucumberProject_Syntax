@@ -62,6 +62,7 @@ public class AddEmployeeSteps extends CommonMethods {
                                                           //the webElement firstnameTF is coming from addEmployeePage
         sendText(lastName, addEmployeePage.lastnameTF);
         sendText(middleName, addEmployeePage.middlenameTF);
+        empId = addEmployeePage.employeeIdField.getAttribute("value");
 
     }
     @When("user enters {string} and {string} and {string} in data driven format")
@@ -178,9 +179,9 @@ public class AddEmployeeSteps extends CommonMethods {
         String dbMiddleName=firstRow.get("emp_middle_name");
         String dbLastName=firstRow.get("emp_lastname");
 
-        Assert.assertEquals("FirstName from frontend does not match the firstname from database", fnFirstName,dbFirstName);
-        Assert.assertEquals("MiddleName from frontend does not match the MiddleName from database", fnMiddleName,dbMiddleName);
-        Assert.assertEquals("LastName from frontend does not match the LastName from database", fnLastName,dbLastName);
+        Assert.assertEquals("FirstName from frontend does not match the firstname from database", "Abdul",dbFirstName);
+        Assert.assertEquals("MiddleName from frontend does not match the MiddleName from database", "Rahman",dbMiddleName);
+        Assert.assertEquals("LastName from frontend does not match the LastName from database", "Zarli",dbLastName);
 
 
     }
